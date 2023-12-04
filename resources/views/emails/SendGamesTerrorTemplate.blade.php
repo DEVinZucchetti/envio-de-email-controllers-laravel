@@ -38,7 +38,7 @@
 
 <body>
 
-    <h1>Lista de Jogos</h1>
+    <h1>Lista de Games</h1>
 
     <ul class="game-list">
         @foreach ($games as $game)

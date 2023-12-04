@@ -26,7 +26,7 @@ class SendGameTerrorEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Melhores Jogos de Terror',
+            subject: 'Melhores Jogos de Terror!!!',
         );
     }
 
