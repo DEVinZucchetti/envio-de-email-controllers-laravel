@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Aventura Games</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Jogos sensacionais</h1>
+    <h4>Estas aventuras lhe aguardam</h4>
 </body>
 </html>

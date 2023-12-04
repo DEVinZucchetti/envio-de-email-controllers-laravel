@@ -20,10 +20,11 @@ class EnvioEmailJogosParaUsuarios extends Command
         $products = Product::query()
         ->inRandomOrder()
         ->take(10)
+        // ->whereBetween('price',  [20 , 100])
         ->get();
 
         Mail::to('developerjose@hotmail.com','jose carlos narciso')
-        ->send(new EnvioEmailComDezGamesAleatorios());
+        ->send(new EnvioEmailComDezGamesAleatorios($products));
 
         // teste para mostrar se esta pegando os 10 jogos aleatórios
         // foreach($products as $produt){
