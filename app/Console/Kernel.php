@@ -2,22 +2,23 @@
 
 namespace App\Console;
 
+use App\Console\Commands\SendEmailWithGameOfTheDay;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
 class Kernel extends ConsoleKernel
 {
-    /**
-     * Define the application's command schedule.
-     */
+    protected $commands = [
+        SendEmailWithGameOfTheDay::class
+    ];
+
     protected function schedule(Schedule $schedule): void
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->command('app:send-email-with-game-of-the-day')
+        ->timezone('America/Sao_Paulo')
+        ->at('12:00');
     }
 
-    /**
-     * Register the commands for the application.
-     */
     protected function commands(): void
     {
         $this->load(__DIR__.'/Commands');
