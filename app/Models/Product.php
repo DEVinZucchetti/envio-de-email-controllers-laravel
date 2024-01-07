@@ -14,4 +14,9 @@ class Product extends Model
     protected $casts = [
         'price' => 'float'
     ];
+
+    public function avaliations()
+    {
+        return $this->hasMany(Avaliation::class, 'product_id');
+    }
 }
